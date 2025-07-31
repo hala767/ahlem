@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catégorie - Ici c'est la mode</title>
+  <link rel="stylesheet" href="assests/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+ <!-- شريط علوي -->
+  <header class="navbar">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+    <h1 class="logo">Ici c'est la mode</h1>
+    <div class="header-right">
+      <a href="search.html" class="icon">🔍</a>
+      <a href="panier.html" class="icon">🛒</a>
+    </div>
+  </div>
+  </header>
+
+  <!-- صفحة القائمة المنسدلة -->
+  <div id="menuPage" class="menu-page">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    <nav class="menu-links">
+      <a href="#">🏠 Accueil</a>
+      <a href="#">👗 Robe</a>
+      <a href="#">🧥 Costume</a>
+      <a href="#">👚 Ensemble</a>
+      <a href="#">🧥 Veste</a>
+      <a href="#">🦺 Gilet</a>
+    </nav>
+
+      <div class=footer-section">
+      <p>📞 0661 52 42 52 - 023 443 449</p>
+      <p>📍 05 Rue Kerouche Slimane, BIRKHADEM</p>
+      <p>🕒 Samedi - Jeudi: 19h - 20h | Vendredi:15h - 20h</p>
+    </div>
+  </div>
+    </div>
+</header>
+
+ <!-- 🟨 TRI & FILTRE BAR -->
+<section class="shop-bar">
+  <div class="affichage-tri">
+    <p>Affichage de 1-24 sur 44 résultats</p>
+
+    <div class="dropdown">
+      <button onclick="toggleDropdown('triDropdown')">Tri par défaut</button>
+      <ul id="triDropdown" class="dropdown-menu">
+        <li onclick="sortProducts('default')">Tri par défaut</li>
+        <li onclick="sortProducts('popularite')">Tri par popularité</li>
+        <li onclick="sortProducts('recent')">Tri du plus récent au plus ancien</li>
+        <li onclick="sortProducts('prixAsc')">Tri par tarif croissant</li>
+        <li onclick="sortProducts('prixDesc')">Tri par tarif décroissant</li>
+      </ul>
+    </div>
+  </div>
+  <div class="filtre-btn-container">
+    <button onclick="openFiltre()">Filtrer</button>
+  </div>
+</section>
+ <!-- 📋 FILTRE OVERLAY -->
+<div id="filtreOverlay" class="overlay-page">
+  <span class="close-btn" onclick="closeFiltre()">×</span>
+  <div class="filtre-content">
+
+    <!-- ✅ Catégorie -->
+    <div class="filtre-section">
+      <div class="filtre-header" onclick="toggleCollapse('catList', 'catIcon')">
+        <h4>Catégorie</h4>
+        <span id="catIcon" class="toggle-icon">+</span>
+      </div>
+      <ul id="catList" class="filtre-list hidden">
+        <li>
+          <input type="checkbox" onchange="goToCategorie('robe')" />
+          Robe
+          <span class="item-toggle"></span>
+        </li>
+        <li>
+          <input type="checkbox" onchange="goToCategorie('ensemble')" />
+          Ensemble
+          <span class="item-toggle"></span>
+        </li>
+        <li>
+          <input type="checkbox" onchange="goToCategorie('veste')" />
+          Veste
+          <span class="item-toggle"></span>
+        </li>
+        <li>
+          <input type="checkbox" onchange="goToCategorie('gilet')" />
+          Gilet
+          <span class="item-toggle"></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ✅ Prix -->
+    <div class="filtre-section">
+      <div class="filtre-header" onclick="toggleCollapse('priceSection', 'priceIcon')">
+        <h4>Prix</h4>
+        <span id="priceIcon" class="toggle-icon">+</span>
+      </div>
+      <div id="priceSection" class="price-slider hidden">
+        <label>Prix: <span id="prix-range">2,500DA - 7,900DA</span></label>
+        <input type="range" min="2500" max="7900" step="100" value="2500" id="minPrice" oninput="updatePrixRange()" />
+        <input type="range" min="2500" max="7900" step="100" value="7900" id="maxPrice" oninput="updatePrixRange()" />
+      </div>
+    </div>
+
+    <!-- ✅ Bouton -->
+    <button onclick="returnToShop()">Filtrer</button>
+
+  </div>
+</div>
+
+  <!-- ✅ PRODUITS -->
+  <section class="products-grid">
+    <!-- مثال منتج واحد (كرري هذا حسب الحاجة أو ديناميكياً لاحقاً) -->
+    <div class="product-card">
+      <img src="assets/images/produits/robe1.jpg" alt="Robe Chic">
+      <h3>Robe Chic</h3>
+      <p class="price">3500 DA</p>
+      <button>Voir le produit</button>
+    </div>
+
+    <!-- كرري بطاقات المنتجات هنا -->
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <!-- 🟫 FOOTER -->
+ <footer  class="footer">
+  <div  class="footer-content">
+    <!-- اسم المحل -->
+    <h2 class="footer-name">ICI C'EST LA MODE</h2>
+
+    <!-- جملة تعريفية -->
+    <p class="footer-desc">L'élégance au meilleur prix pour toutes les femmes.</p>
+
+    <!-- أيقونات السوشيال ميديا -->
+    <div class="footer-socials">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <!-- التوقيت -->
+    <p class="footer-hours">
+      <strong></strong><br>
+      Samedi - Jeudi: 19h - 20h<br>
+      Vendredi: 15h - 20h
+    </p>
+
+    <!-- مواقع المحلات -->
+    <div class="footer-locations">
+      <p><strong>BOUTIQUE ALGER</strong><br>📍 05 Rue Kerouche Slimane, BIRKHADEM<br>📞 0661 52 42 52 - 023 443 499</p>
+      
+    </div>
+  </div>
+</footer> 
+<div class="copyright-bar">
+  <p class="copyright">©2025 ICI C'EST LA MODE</p>
+</div>
+
+  <!-- ✅ SCRIPTS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+  <!-- ✅ PRODUITS -->
+  <section class="products-grid">
+    <!-- مثال منتج واحد (كرري هذا حسب الحاجة أو ديناميكياً لاحقاً) -->
+    <div class="product-card">
+      <img src="assets/images/produits/robe1.jpg" alt="Robe Chic">
+      <h3>Robe Chic</h3>
+      <p class="price">3500 DA</p>
+      <button>Voir le produit</button>
+    </div>
+
+    <!-- كرري بطاقات المنتجات هنا -->
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <!-- 🟫 FOOTER -->
+ <footer  class="footer">
+  <div  class="footer-content">
+    <!-- اسم المحل -->
+    <h2 class="footer-name">ICI C'EST LA MODE</h2>
+
+    <!-- جملة تعريفية -->
+    <p class="footer-desc">L'élégance au meilleur prix pour toutes les femmes.</p>
+
+    <!-- أيقونات السوشيال ميديا -->
+    <div class="footer-socials">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <!-- التوقيت -->
+    <p class="footer-hours">
+      <strong></strong><br>
+      Samedi - Jeudi: 19h - 20h<br>
+      Vendredi: 15h - 20h
+    </p>
+
+    <!-- مواقع المحلات -->
+    <div class="footer-locations">
+      <p><strong>BOUTIQUE ALGER</strong><br>📍 05 Rue Kerouche Slimane, BIRKHADEM<br>📞 0661 52 42 52 - 023 443 499</p>
+      
+    </div>
+  </div>
+</footer> 
+<div class="copyright-bar">
+  <p class="copyright">©2025 ICI C'EST LA MODE</p>
+</div>
+
+  <!-- ✅ SCRIPTS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

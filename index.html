@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ici c'est la mode</title>
+  <link rel="stylesheet" href="assests/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">s
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+
+  <!-- شريط علوي -->
+  <header class="navbar">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+    <h1 class="logo">Ici c'est la mode</h1>
+    <div class="header-right">
+      <a href="search.html" class="icon">🔍</a>
+      <a href="panier.html" class="icon">🛒</a>
+    </div>
+  </div>
+  </header>
+
+  <!-- صفحة القائمة المنسدلة -->
+  <div id="menuPage" class="menu-page">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    <nav class="menu-links">
+      <a href="#">🏠 Accueil</a>
+      <a href="#">👗 Robe</a>
+      <a href="#">🧥 Costume</a>
+      <a href="#">👚 Ensemble</a>
+      <a href="#">🧥 Veste</a>
+      <a href="#">🦺 Gilet</a>
+    </nav>
+
+      <div class=footer-section">
+      <p>📞 0661 52 42 52 - 023 443 449</p>
+      <p>📍 05 Rue Kerouche Slimane, BIRKHADEM</p>
+      <p>🕒 Samedi - Jeudi: 19h - 20h | Vendredi:15h - 20h</p>
+    </div>
+  </div>
+    </div>
+</header>
+
+  <!-- ⭐ SECTION HERO -->
+  <section class="hero">
+    <img src="assests/images/logo.png.jpg" alt="logo" class="hero-image">
+    <h2 class="hero-title">QUALITY CLOTHES FOR EVERY WOMAN</h2>
+    <p class="hero-subtitle">Will satisfy you no matter your style, we provide high quality unique models to make sure you’ll shine!</p>
+    <a href="shop.html" class="btn-shop">Shop now</a>
+  </section>
+
+ <!-- 🔁 BANNIÈRE défilante entre deux lignes -->
+<div class="banniere-container">
+  <div class="horizontal-line"></div>
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      L'élégance à bon prix . 🚚 Livraison disponible dans les 58 wilayas . Bienvenue à magasin ICI C'EST LA MODE
+    </marquee>
+  </div>
+  <div class="horizontal-line"></div>
+</div>
+
+  <!-- 🛍 NOTRE COLLECTION -->
+  <section class="collection">
+    <h3 class="title-section">Notre Collection</h3>
+    <div class="category-menu">
+     <a href="#" class="active">NEW COLLECTION</a>
+    <a href="#">ENSEMBLE</a>
+    <a href="#">ROBE</a>
+    <a href="#">VESTE</a>
+    <a href="#">Gilet</a>
+    <a href="#">Abaya</a>
+    <a href="#">Chemise</a>
+    <a href="#">Pantalon</a>
+    <a href="#">Chasseurs</a>
+    <a href="#">Robe soire</a>
+  </div>
+    <div id="collection-products" class="products-bar">
+      <!-- سيتم ملؤه عبر جافاسكريبت حسب الفئة -->
+    </div>
+  </section>
+  <!-- Produit 1 -->
+    <a href="produit.html?title=Gilet%20&type=Gilet&price=3200%20DA&desc=Gilet%20jaune%20doux%20et%20élégant&image=images/gilet.jpg">
+      <div class="product-card">
+        <div class="icons">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-eye"></i>
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+        <img src="assests/images/gilet.jpg" alt="Gilet">
+        <h3>Gilet</h3>
+        <p>3,200 DA</p>
+      </div>
+    </a>
+
+    <!-- Produit 2 -->
+    <a href="produit.html?title=Ensemble%20&type=Ensemble&price=4900%20DA&desc=Tenue%20rose%20classe%20et%20modeste&image=img/Ensemble.jpg">
+      <div class="product-card">
+        <div class="icons">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-eye"></i>
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+        <img src="assests/images/ensemble.jpg" alt="Ensemble ">
+        <h3>Ensemble </h3>
+        <p>4,900 DA</p>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- 📸 SLIDER IMAGES AVEC TEXTE -->
+  <section class="promo-slider">
+  <div class="slider-item active">
+    <img src="assests/images/tendance.jpg" alt="tendance">
+    <div class="slider-text">
+      <h4>Tendance, qualité, confort... tout est ici</h4>
+      <a href="shop.html">Shop now</a>
+    </div>
+  </div>
+
+  <div class="slider-item">
+    <img src="assests/images/nouveautés.jpg" alt="nouveautés">
+    <div class="slider-text">
+      <h4>Les indispensables de votre garde-robe sont ici</h4>
+      <a href="shop.html">Shop now</a>
+    </div>
+  </div>
+
+  <div class="slider-item">
+    <img src="assests/images/vestes.jpg" alt="vestes">
+    <div class="slider-text">
+      <h4>Envie d'un look parfait ? Nos vestes sont pour vous</h4>
+      <a href="shop.html">Shop now</a>
+    </div>
+  </div>
+</section>
+
+  <!-- 💬 SECTION WE BELIEVE -->
+  <section class="we-believe">
+  <hr class="line">
+  <div class="we-believe-content">
+    <h2>We believe in elegance for every woman</h2>
+    <p>Exprimez votre style unique avec notre collection raffinée.</p>
+  </div>
+  <hr class="line">
+</section>
+
+  <!-- 🖼️ SECTION IMAGES DE CATÉGORIES -->
+  <section class="categories">
+  <div class="category-card" onclick="goToCategory('robe')">
+    <div class="category-image">
+      <img src="assests/images/robe.jpg" alt="robe">
+      <h4>Robe</h4>
+    </div>
+  </div>
+
+  <div class="category-card" onclick="goToCategory('ensemble')">
+    <div class="category-image">
+      <img src="assests/images/ensemble.jpg" alt="ensemble">
+      <h4>Ensemble</h4>
+    </div>
+  </div>
+</section>
+<!-- 🔁 BANNIÈRE défilante entre deux lignes -->
+<div class="banniere-container">
+  <div class="horizontal-line"></div>
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      L'élégance à bon prix . 🚚 Livraison disponible dans les 58 wilayas . Bienvenue à magasin ICI C'EST LA MODE
+    </marquee>
+  </div>
+  <div class="horizontal-line"></div>
+</div>
+  <!-- ❓ FAQ -->
+ <section id="faq" class="faq-section">
+  <h2>FAQ</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">Quels sont les délais de livraison ? <span class="toggle-icon">+</span></div>
+    <div class="faq-answer">Les délais de livraison sont généralement de 2 à 5 jours ouvrables.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Que faire si je ne reçois pas ma commande ? <span class="toggle-icon">+</span></div>
+    <div class="faq-answer">Veuillez nous contacter au plus vite via notre page de contact ou au 0661524252 ou 023443499.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Puis-je modifier ou annuler ma commande après l’avoir passée ? <span class="toggle-icon">+</span></div>
+    <div class="faq-answer">Oui, si votre commande n’a pas encore été expédiée. Veuillez nous contacter immédiatement.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Proposez-vous des retours ou échanges ? <span class="toggle-icon">+</span></div>
+    <div class="faq-answer">Oui, vous pouvez retourner ou échanger sous 7 jours.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Que faire si je reçois un article incorrect ? <span class="toggle-icon">+</span></div>
+    <div class="faq-answer">Veuillez nous contacter immédiatement afin de résoudre le problème.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Quels sont vos horaires ? <span class="toggle-icon">+</span></div>
+    <div class="faq-answer">Nous sommes disponibles tous les jours de 9h à 20h.</div>
+  </div>
+</section>
+
+  <!-- 🟫 FOOTER -->
+ <footer  class="footer">
+  <div  class="footer-content">
+    <!-- اسم المحل -->
+    <h2 class="footer-name">ICI C'EST LA MODE</h2>
+
+    <!-- جملة تعريفية -->
+    <p class="footer-desc">L'élégance au meilleur prix pour toutes les femmes.</p>
+
+    <!-- أيقونات السوشيال ميديا -->
+    <div class="footer-socials">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <!-- التوقيت -->
+    <p class="footer-hours">
+      <strong></strong><br>
+      Samedi - Jeudi: 19h - 20h<br>
+      Vendredi: 15h - 20h
+    </p>
+
+    <!-- مواقع المحلات -->
+    <div class="footer-locations">
+      <p><strong>BOUTIQUE ALGER</strong><br>📍 05 Rue Kerouche Slimane, BIRKHADEM<br>📞 0661 52 42 52 - 023 443 499</p>
+      
+    </div>
+  </div>
+</footer> 
+<div class="copyright-bar">
+  <p class="copyright">©2025 ICI C'EST LA MODE</p>
+</div>
+</body>
+</html>

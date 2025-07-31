@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Robe Élégante",
+    "category": "robe",
+    "price": "4500 DA",
+    "description": "Robe élégante pour soirée ou journée spéciale.",
+    "image": "assestes/images/robe1.jpg",
+    "sizes": ["S", "M", "L"],
+    "colors": ["rose", "noir"]
+  },
+  {
+    "id": 2,
+    "title": "Costume Classique",
+    "category": "costume",
+    "price": "6500 DA",
+    "description": "Costume parfait pour les occasions formelles.",
+    "image": "assests/images/costume1.jpg",
+    "sizes": ["M", "L", "XL"],
+    "colors": ["bleu", "gris"]
+  }
+]

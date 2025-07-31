@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détails du produit - Ici c'est la mode</title>
+  <link rel="stylesheet" href="assests/css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- شريط علوي -->
+  <header class="navbar">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+    <h1 class="logo">Ici c'est la mode</h1>
+    <div class="header-right">
+      <a href="search.html" class="icon">🔍</a>
+      <a href="panier.html" class="icon">🛒</a>
+    </div>
+  </div>
+  </header>
+
+  <!-- صفحة القائمة المنسدلة -->
+  <div id="menuPage" class="menu-page">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    <nav class="menu-links">
+      <a href="#">🏠 Accueil</a>
+      <a href="#">👗 Robe</a>
+      <a href="#">🧥 Costume</a>
+      <a href="#">👚 Ensemble</a>
+      <a href="#">🧥 Veste</a>
+      <a href="#">🦺 Gilet</a>
+    </nav>
+
+      <div class=footer-section">
+      <p>📞 0661 52 42 52 - 023 443 449</p>
+      <p>📍 05 Rue Kerouche Slimane, BIRKHADEM</p>
+      <p>🕒 Samedi - Jeudi: 19h - 20h | Vendredi:15h - 20h</p>
+    </div>
+  </div>
+    </div>
+</header>
+
+  <!-- 📸 PRODUIT IMAGE + DETAILS -->
+  <section class="product-details">
+    <div class="product-images">
+      <img id="mainImage" src="assests/images/robe.jpg" alt="Produit principal" class="main-product-img">
+      <div class="thumbnail-row">
+        <img src="assets/images/robe.jpg" class="thumbnail" onclick="changeMainImage(this.src)">
+        <img src="assets/images/robe2.jpg" class="thumbnail" onclick="changeMainImage(this.src)">
+        <img src="assets/images/robe3.jpg" class="thumbnail" onclick="changeMainImage(this.src)">
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h2 class="product-title">Robe Elegante</h2>
+      <p class="product-price"><span class="old-price">4900 DA</span> <span class="new-price">3200 DA</span></p>
+
+      <!-- 🟢 TAILLES -->
+      <div class="product-option">
+        <label for="taille">Taille :</label>
+        <select id="taille">
+          <option>Choisir une option</option>
+          <option>36</option>
+          <option>38</option>
+          <option>40</option>
+          <option>42</option>
+          <option>44</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+      </div>
+
+      <!-- 🎨 COULEURS -->
+      <div class="product-option">
+        <label for="couleur">Couleur :</label>
+        <div class="color-options">
+          <span class="color-circle" style="background-color: pink;"></span>
+          <span class="color-circle" style="background-color: black;"></span>
+          <span class="color-circle" style="background-color: beige;"></span>
+          <span class="color-circle" style="background-color: blanchedalmond;"></span>
+          <span class="color-circle" style="background-color: blue;"></span>
+        </div>
+      </div>
+
+      <!-- 🔢 QUANTITÉ -->
+      <div class="product-option">
+        <label>Quantité :</label>
+        <div class="quantity-selector">
+          <button onclick="updateQuantity(-1)">-</button>
+          <input type="number" id="quantity" value="1" min="1">
+          <button onclick="updateQuantity(1)">+</button>
+        </div>
+      </div>
+
+      <!-- 🛒 BOUTONS -->
+      <div class="product-actions">
+        <button class="btn-panier">Ajouter au panier</button>
+        <button class="btn-acheter">Acheter maintenant</button>
+      </div>
+
+      <!-- 📜 DESCRIPTION -->
+<div class="description-toggle" onclick="toggleDescription()">
+  <div class="description-header">
+    <span class="description-title">Description</span>
+    <span id="description-icon">+</span>
+  </div>
+  <p id="description-content" style="display:none;">
+    Robe douce et élégante parfaite pour toutes les occasions. Tissu de qualité, coupe moderne.
+  </p>
+</div>
+
+  <!-- 🟦 PRODUITS SIMILAIRES -->
+  <section class="similar-products">
+  <h3>Produits similaires</h3>
+  <div class="product-slider">
+    <a href="produit.html?nom=Robe%20Satin&prix=3900&image=robe2.jpg&desc=Robe%20satin%20élégante">
+      <div class="product-card">
+        <img src="assets/images/robe2.jpg" alt="Robe Satin">
+        <h4>Robe Satin</h4>
+        <p>3900 DA</p>
+      </div>
+    </a>
+    
+    <a href="produit.html?nom=Robe%20Classique&prix=3200&image=robe3.jpg&desc=Robe%20classique%20pour%20les%20occasions">
+      <div class="product-card">
+        <img src="assets/images/robe3.jpg" alt="Robe Classique">
+        <h4>Robe Classique</h4>
+        <p>3200 DA</p>
+      </div>
+    </a>
+  </section>
+  <!-- 🟥 PRODUITS CONSULTÉS -->
+  <a href="produit.html?nom=Gilet&prix=3200&image=gilet.jpg&desc=Gilet stylé">
+  <div class="product-card">
+    <img src="assests/images/gilet.jpg" alt="Gilet">
+    <h4>Gilet</h4>
+    <p>3200 DA</p>
+  </div>
+</a>
+
+<a href="produit.html?nom=Ensemble Chic&prix=5600&image=ensemble.jpg&desc=Ensemble chic pour soirée">
+  <div class="product-card">
+    <img src="assests/images/ensemble.jpg" alt="Ensemble Chic">
+    <h4>Ensemble Chic</h4>
+    <p>5600 DA</p>
+  </div>
+</a>
+
+
+  <!-- 🟫 FOOTER -->
+  <footer  class="footer">
+  <div  class="footer-content">
+    <!-- اسم المحل -->
+    <h2 class="footer-name">ICI C'EST LA MODE</h2>
+
+    <!-- جملة تعريفية -->
+    <p class="footer-desc">L'élégance au meilleur prix pour toutes les femmes.</p>
+
+    <!-- أيقونات السوشيال ميديا -->
+    <div class="footer-socials">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <!-- التوقيت -->
+    <p class="footer-hours">
+      <strong></strong><br>
+      Samedi - Jeudi: 19h - 20h<br>
+      Vendredi: 15h - 20h
+    </p>
+
+    <!-- مواقع المحلات -->
+    <div class="footer-locations">
+      <p><strong>BOUTIQUE ALGER</strong><br>📍 05 Rue Kerouche Slimane, BIRKHADEM<br>📞 0661 52 42 52 - 023 443 499</p>
+      
+    </div>
+  </div>
+</footer> 
+<div class="copyright-bar">
+  <p class="copyright">©2025 ICI C'EST LA MODE</p>
+</div>
+
+</body>
+</html>
